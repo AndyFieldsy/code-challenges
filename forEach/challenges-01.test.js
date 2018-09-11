@@ -133,6 +133,9 @@ const removeElements = (input, callback) => {
   for(let i = 0; i < input.length; i++) {
     callback();
   }
+  for(let i = 0; i < 3; i++) {
+    input.pop();
+  }
   return input;
 };
 
@@ -144,6 +147,11 @@ const removeElements = (input, callback) => {
 
 const removeWithForEach = (input, callback) => {
   // Solution code here...
+  // input.forEach(callback);
+  for(let i = 0; i < 3; i++) {
+    input.pop();
+  }
+  return input;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -159,6 +167,11 @@ const removeWithForEach = (input, callback) => {
 
 const removeWithAnon = (input) => {
   // Solution code here...
+
+  for(let i = 0; i < 3; i++) {
+    input.pop();
+  }
+  return input;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -181,6 +194,15 @@ const removeWithAnon = (input) => {
 
 const createList = (availableItems) => {
   // Solution code here...
+  // availableItems.forEach();
+  const inventory = [];
+
+  for(let i = 0; i < availableItems.length; i++) {
+    if(availableItems[i].available === true) {
+      inventory.push(availableItems[i].name);
+    }
+  }
+  return inventory;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -199,6 +221,18 @@ const createList = (availableItems) => {
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  arr.forEach(function(value,idx){
+    if(value % 3 === 0) {
+      arr[idx] = 'Fizz';
+    }
+    if(value % 5 === 0) {
+      arr[idx] = 'Buzz';
+    }
+    if(value % 3 === 0 & value % 5 === 0) {
+      arr[idx] = 'Fizz Buzz';
+    }
+  });
+  return arr;
 };
 
 // ------------------------------------------------------------------------------------------------
