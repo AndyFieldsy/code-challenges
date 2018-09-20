@@ -101,7 +101,6 @@ const listFoods = (recipe) => {
     let holder = gruffaloCrumble.ingredients[i].indexOf(' ', 4)+1;
     let topush = gruffaloCrumble.ingredients[i].slice(holder, gruffaloCrumble.ingredients[i].length)
     result.push(topush);
-
   }
   return result;
 }
@@ -121,7 +120,6 @@ const splitFoods = (recipe) => {
     let holder = gruffaloCrumble.ingredients[i].indexOf(' ', 4)+1;
     let topush = gruffaloCrumble.ingredients[i].slice(holder, gruffaloCrumble.ingredients[i].length)
     result.push(topush);
-
   }
   return result;
 }
@@ -159,6 +157,12 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
+  let holder = [];
+  for(let i = arr.length; arr.length < i; i--){
+    if(arr[i]%2===0){
+      arr[i].splice(i,'');
+    }
+  }
 };
 
 /*------------------------------------------------------------------------
