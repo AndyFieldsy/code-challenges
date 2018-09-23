@@ -75,9 +75,9 @@ const addBirthYearProperty = (obj, year) => {
 
 const setStatusAsAuthor = (people) => {
   // Solution code here...
-  forEach(people, idx) {
-    
-  }
+  people.forEach(function(people){
+    people.isAuthor = true;
+  });
 };
 
 
@@ -100,7 +100,12 @@ const setStatusAsAuthor = (people) => {
 
 const append = (list1, list2) => {
   // Solution code here...
-
+//   for(let i = 0; i < list2.length; i++){
+//     list1.push(list2[i]);
+//   }
+  list2.forEach(function(idx){
+    list1.push(idx);
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
